@@ -77,3 +77,17 @@
         productsTrack.addEventListener('mouseleave', () => {
             productsTrack.style.animationPlayState = 'running';
         });
+
+   
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Fechar o menu ao clicar em um link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
