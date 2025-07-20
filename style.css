@@ -783,6 +783,7 @@
                 height: 140px;
             }
         }
+        
         /* Seção de Avaliações */
         .reviews-section {
             position: relative;
@@ -885,6 +886,7 @@
         .rating {
             margin: 15px 0;
             color: var(--light-gold);
+            text-align: center;
         }
         
         .rating i {
@@ -1046,7 +1048,7 @@
                 max-width: 250px;
             }
         }
-        
+
         /* Galeria */
         :root {
             --gold: #c5a04a;
