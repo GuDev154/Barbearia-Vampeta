@@ -281,6 +281,56 @@
             margin-top: 30px;
             font-size: 1.1rem;
         }
+
+        /* Media Query para dispositivos menores que 768px */
+        @media (max-width: 768px) {
+            .desktop-menu {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1001;
+                background: rgba(10, 10, 10, 0);
+                border-radius: 5px;
+                padding: 2px; /* Área de toque maior */
+                width: 50px; /* Largura fixa para área de toque */
+                height: 50px; /* Altura fixa para área de toque */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Ajustes responsivos para o logo */
+            .logo {
+                font-size: clamp(1.2rem, 4.5vw, 1.5rem); /* Tamanho responsivo com limites */
+                max-width: calc(100% - 70px); /* Espaço para o menu hambúrguer */
+                overflow: visible;
+                text-overflow: clip;
+                white-space: nowrap;
+                padding-left: 5px;
+            }
+            
+            .logo::before {
+                width: clamp(30px, 8vw, 40px); /* Tamanho proporcional à largura da tela */
+                height: clamp(30px, 8vw, 40px); /* Mantém proporção quadrada */
+                line-height: clamp(30px, 8vw, 40px); /* Centraliza o ícone */
+                margin-right: 8px;
+                font-size: clamp(1rem, 4vw, 1.3rem); /* Tamanho de fonte responsivo */
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
         
         /* Sobre - Layout Atualizado */
         .about {
