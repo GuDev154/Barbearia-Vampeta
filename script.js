@@ -78,4 +78,26 @@
             productsTrack.style.animationPlayState = 'running';
         });
 
+        // Animação simples para as avaliações
+        document.addEventListener('DOMContentLoaded', function() {
+            const reviewCards = document.querySelectorAll('.review-card');
+            
+            // Animação de entrada para os cards
+            setTimeout(() => {
+                reviewCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 200 * index);
+                });
+            }, 500);
+            
+            // Inicializar opacidade e posição
+            reviewCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+        });
+
         
